@@ -1,5 +1,5 @@
 ---
-name: design-token-extractor
+name: design-token-extractor-by-stranger
 description: Extract design tokens (colors, typography, spacing, radii, shadows) from a Figma file, screenshot, or pasted style sheet into a clean tokens.json. Use when the user shares a design and asks to "pull tokens", "extract the design system", "get the colors and type", or before starting a Figma-to-code conversion.
 ---
 

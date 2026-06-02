@@ -2,17 +2,23 @@
 
 Thanks for sharing what you built! This repo exists so workshop attendees (and anyone else) can publish their skills and find ones built by others.
 
+## Never built a skill? Start with onboarding
+
+Open the repo in your agent and say **"onboard me"** (or just open it — `AGENTS.md` kicks off automatically). The agent guides you from a rough idea to a tested, PR-ready skill, and saves your working notes in `skills-we-built/<your-skill>/_planning/`. Full guide: [.cursor/skills/create-a-skill/SKILL.md](.cursor/skills/create-a-skill/SKILL.md) (`references/` + `assets/`).
+
+The steps below are the manual version of what onboarding does for you.
+
 ## The 60-second version
 
 1. **Fork** this repo.
-2. **Copy** `_template/` to `skills/your-skill-name/` (use kebab-case).
+2. **Copy** `_template/` to `skills-we-built/your-skill-name-by-username/` (kebab-case; folder must end with `-by-<your-github-username>`).
 3. **Edit** `SKILL.md`:
    - `name`: must match the folder name
    - `description`: one sentence — the agent uses this to decide when to load your skill, so be specific about the *trigger*
    - Body: clear, step-by-step instructions
 4. **Add a one-liner** to `README.md` under the right category:
    ```markdown
-   - [your-skill-name](skills/your-skill-name) — One sentence describing what it does.
+   - [your-skill-name-by-username](skills-we-built/your-skill-name-by-username) — One sentence describing what it does.
    ```
 5. **Open a PR** with a short title (`add: your-skill-name`).
 
@@ -28,26 +34,22 @@ Good:
 Less good:
 > Helps with accessibility.
 
-## Skill structure
+## Skill structure (Cursor standard)
 
-Minimum:
-
-```
-skills/your-skill-name/
-└── SKILL.md
-```
-
-Optional extras (load on demand):
+When you open a PR, put the skill in `skills-we-built/your-skill-name-by-username/` using the same layout Cursor discovers under `.cursor/skills/`:
 
 ```
-skills/your-skill-name/
-├── SKILL.md
-├── scripts/           # executable helpers the skill can run
-├── references/        # longer docs the skill points to
-└── assets/            # templates, examples, fixtures
+skills-we-built/your-skill-name-by-username/
+├── SKILL.md              # required — name must match folder
+├── references/           # optional — longer docs
+├── scripts/              # optional — executable helpers
+├── assets/               # optional — templates, fixtures
+└── _planning/            # optional — workshop notes (draft, evals, research)
 ```
 
-Reference these from inside `SKILL.md` with relative paths (`scripts/check.py`, `references/wcag-checklist.md`).
+While building locally, work in `.cursor/skills/your-skill-name-by-username/` so Cursor loads it immediately, then copy to `skills-we-built/` before the PR.
+
+Reference bundled files from `SKILL.md` with relative paths (`references/wcag-checklist.md`, `scripts/check.py`).
 
 ## Quality bar
 

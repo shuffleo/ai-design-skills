@@ -1,5 +1,5 @@
 ---
-name: accessibility-checker
+name: accessibility-checker-by-stranger
 description: Audit a design, screenshot, or live component against WCAG 2.1 AA — color contrast, target size, focus order, semantic structure, alt text. Use when the user says "check a11y", "is this accessible?", "audit accessibility", or shares a design before engineering handoff.
 ---
 
