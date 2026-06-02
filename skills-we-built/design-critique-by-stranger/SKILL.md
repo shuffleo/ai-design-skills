@@ -1,5 +1,5 @@
 ---
-name: design-critique
+name: design-critique-by-stranger
 description: Give structured, prioritized design feedback on a mockup or screenshot — hierarchy, consistency, copy, and usability. Use when the user says "review this design", "critique this", "what do you think of this screen?", or shares a Figma frame for feedback.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: component-doc-writer
+name: component-doc-writer-by-stranger
 description: Generate documentation for a UI component from its source file — variant table, prop reference, usage examples, do/don't, and accessibility notes. Use when the user shares a component file and says "document this", "write docs for this component", or "add this to the design system".
 ---
 

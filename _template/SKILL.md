@@ -1,44 +1,36 @@
 ---
-name: your-skill-name
-description: One sentence describing WHEN this skill should fire and WHAT it does. The agent reads only this line by default — be specific about triggers (e.g. "Use when the user says 'audit a11y' or shares a design for review").
+name: your-skill-name-by-username
+description: One sentence: WHAT it does. Second sentence: "Use when [specific triggers, exact phrases the user might say]."
 ---
 
 # Your Skill Name
 
-A one-paragraph overview of what this skill is for. Mention the inputs it expects (a Figma URL, a screenshot, a component file, etc.) and the output it produces (a report, a refactored file, a JSON token set, etc.).
+One sentence overview — what the user provides and what the skill returns.
 
-## When to use
+## Quick start
 
-- Trigger phrase 1 (e.g. "review this design")
-- Trigger phrase 2 (e.g. "check accessibility of...")
-- Situation 3 (e.g. before design handoff to engineering)
+> User says: "…" — Skill returns: …
 
-## When NOT to use
+[One minimal example. Show the trigger phrase and the output shape in a sentence or two.]
 
-- Cases where another skill is a better fit, or where this skill would over-fire.
+## Workflow
 
-## Inputs
-
-What the user needs to provide for this skill to work.
-
-## Steps
-
-1. First do this.
-2. Then do that.
-3. Produce the output in this format.
+1. Do this first.
+2. Then do this.
+3. Return the output in the format below.
 
 ## Output format
 
-Describe (or show) exactly what the skill should return. Tables, JSON, markdown sections — whatever fits.
+Show the exact template the skill should return — copy/paste ready.
 
-## Examples
+```
+[paste your output template here]
+```
 
-### Example 1: <short description>
+## When NOT to use
 
-**Input:** ...
+- [Situation where another skill fits better, or this would over-fire.]
 
-**Output:** ...
+## Edge cases / Notes
 
-## Notes
-
-Edge cases, known limitations, anything the agent should remember.
+- [Anything the agent should handle differently from the happy path.]

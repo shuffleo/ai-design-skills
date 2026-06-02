@@ -1,5 +1,5 @@
 ---
-name: figma-to-tailwind
+name: figma-to-tailwind-by-stranger
 description: Convert a Figma frame into a responsive React + Tailwind component that uses the project's existing design tokens instead of hardcoded values. Use when the user shares a Figma URL or selection and asks to "build this", "code this up", "turn this into a component", or "make a React version".
 ---
 

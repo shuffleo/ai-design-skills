@@ -8,15 +8,36 @@ Created during the **Cursor x Goodnotes AI Design Workshop**, this repo is where
 
 ---
 
+## New here? Let the agent onboard you
+
+This repo onboards you. Open it in Cursor (or any agent that reads `AGENTS.md`) and the agent greets you and walks you through building your first skill, step by step. If it doesn't start on its own, just say **"onboard me"**.
+
+- [AGENTS.md](AGENTS.md) — what the agent does the moment you open the repo.
+- [.cursor/skills/create-a-skill/SKILL.md](.cursor/skills/create-a-skill/SKILL.md) — the one workshop guide (onboarding + how to write a skill; `references/` + `assets/` per Cursor layout).
+
+Built for designers of every AI-literacy level. No prior skill-writing experience needed.
+
+---
+
 ## What is a Skill?
 
 A Skill is a folder with a `SKILL.md` file that teaches an AI agent how to perform a specific task. It loads only when the agent thinks it's relevant — so you can stack hundreds of skills without bloating context. Cursor added native Skills support in **2.4** (Jan 2026), using the same SKILL.md format Anthropic introduced for Claude.
 
-Minimal skill:
+Minimal skill (Cursor standard):
 
 ```
 my-skill/
 └── SKILL.md
+```
+
+With optional bundles:
+
+```
+my-skill/
+├── SKILL.md
+├── references/   # longer docs, loaded on demand
+├── scripts/        # executable helpers
+└── assets/         # templates, fixtures
 ```
 
 `SKILL.md` starts with YAML frontmatter and then plain instructions:
@@ -40,17 +61,17 @@ Skills built by workshop attendees. **Add yours via PR** — see [CONTRIBUTING.m
 
 ### Design Systems
 
-- [design-token-extractor](skills/design-token-extractor) — Pull colors, typography, spacing, and radii out of a Figma file or screenshot into a clean `tokens.json`.
-- [component-doc-writer](skills/component-doc-writer) — Generate variant tables, prop docs, and usage examples for a React/Vue/Swift component from its source file.
+- [design-token-extractor-by-stranger](skills-we-built/design-token-extractor-by-stranger) — Pull colors, typography, spacing, and radii out of a Figma file or screenshot into a clean `tokens.json`.
+- [component-doc-writer-by-stranger](skills-we-built/component-doc-writer-by-stranger) — Generate variant tables, prop docs, and usage examples for a React/Vue/Swift component from its source file.
 
 ### Figma → Code
 
-- [figma-to-tailwind](skills/figma-to-tailwind) — Convert a Figma frame URL into a responsive Tailwind + React component using your design tokens.
+- [figma-to-tailwind-by-stranger](skills-we-built/figma-to-tailwind-by-stranger) — Convert a Figma frame URL into a responsive Tailwind + React component using your design tokens.
 
 ### Review & Critique
 
-- [accessibility-checker](skills/accessibility-checker) — Audit a screen or component against WCAG 2.1 AA: contrast, focus order, target size, alt text.
-- [design-critique](skills/design-critique) — Structured feedback on a mockup: hierarchy, consistency, copy, and usability — ranked by severity.
+- [accessibility-checker-by-stranger](skills-we-built/accessibility-checker-by-stranger) — Audit a screen or component against WCAG 2.1 AA: contrast, focus order, target size, alt text.
+- [design-critique-by-stranger](skills-we-built/design-critique-by-stranger) — Structured feedback on a mockup: hierarchy, consistency, copy, and usability — ranked by severity.
 
 <!-- Add your skill above this line, under the appropriate category. Create a new category if none fit. -->
 
@@ -62,14 +83,14 @@ Skills built by workshop attendees. **Add yours via PR** — see [CONTRIBUTING.m
 
 ```bash
 mkdir -p .cursor/skills
-cp -r path/to/this/repo/skills/design-token-extractor .cursor/skills/
+cp -r path/to/this/repo/skills-we-built/design-token-extractor-by-stranger .cursor/skills/
 ```
 
 **Global** (every Cursor project):
 
 ```bash
 mkdir -p ~/.cursor/skills
-cp -r path/to/this/repo/skills/design-token-extractor ~/.cursor/skills/
+cp -r path/to/this/repo/skills-we-built/design-token-extractor-by-stranger ~/.cursor/skills/
 ```
 
 Reload the Cursor workspace (`Cmd/Ctrl+Shift+P` → "Reload Window"). Open the Skills panel in the sidebar to confirm it's loaded. The skill activates automatically when your prompt matches its `description`.
