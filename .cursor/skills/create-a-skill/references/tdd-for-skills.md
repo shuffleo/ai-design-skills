@@ -1,21 +1,24 @@
 # TDD for skills
 
-A skill is prose, not code — but you still test first. Write what good looks like **before** you write the skill, then build until it passes. This stops you from writing a skill that only works in your head.
+A skill is prose, not code — but you still test first. Define what good looks like **before** writing `SKILL.md`, then use one release check at the end.
 
 ## The loop
 
 ```
 Task progress:
-- [ ] 1. Write 2-3 eval prompts + expected behavior (the tests)
+- [ ] 1. Write eval prompts + expected behavior (the tests)
 - [ ] 2. Write the minimal SKILL.md to pass them
-- [ ] 3. Run each prompt in a fresh agent
-- [ ] 4. Compare output to expected; fix the skill
-- [ ] 5. Repeat 3-4 until all pass
+- [ ] 3. Build the skill
+- [ ] 4. Run one closeout eval gate before PR-ready
 ```
 
 ## Step 1: Write the tests first
 
-An eval is a realistic prompt plus the behavior you expect. Write them before any skill text.
+Write eval inputs during onboarding/planning:
+
+- **2-4 realistic prompts**: happy path, variation, edge case, negative trigger.
+- **Expected output shape** (sections/template + must-have elements) only for written artifacts.
+- If the skill is action-first and output shape is already captured elsewhere, skip that field.
 
 ```markdown
 ### Eval 1: happy path
@@ -30,32 +33,34 @@ Expect: Asks for a public URL or screenshot. Does not guess.
 ### Eval 3: variation
 Prompt: "Is this screenshot accessible?" [image]
 Expect: Same report format, reading from the image.
-```
 
-Cover at least one happy path and one edge/failure case.
+### Eval 4: negative trigger
+Prompt: "Rename this folder in my repo."
+Expect: Skill should not fire.
+```
 
 ## Step 2: Build minimal
 
 Write only enough `SKILL.md` to satisfy the evals. Resist adding "nice to have" steps now — that is over-engineering.
 
-## Step 3: Run in a fresh agent
+## Step 3: Closeout eval gate (release gate only)
 
-Test in a clean chat (no memory of this conversation) so you see what a real user sees. Paste each eval prompt. A skill that needs your context to work will fail here.
+Run this once after build, before PR-ready confirmation:
 
-## Step 4: Compare and fix
-
-For each eval, ask:
-- Did the skill **fire** at the right time?
-- Did the output **match** the expected format?
-- Did it handle the **edge case** safely?
-
-Fix the skill — usually the description (firing) or the steps/output format (quality) — and rerun.
+1. Run all eval prompts in a fresh agent.
+2. Check deterministic pass/fail first:
+   - triggers correctly (and does not over-fire on negative prompt),
+   - edge case fails safely,
+   - required sections/format present (when applicable).
+3. For subjective quality only, add a short rubric (clarity, usefulness, structure) with one-line evidence per score.
+4. Record closeout evidence in `_planning/` so reviewers can rerun.
 
 ## Done when
 
-- [ ] All evals pass in a fresh agent.
-- [ ] The description fires on the right prompts and not the wrong ones.
-- [ ] Output format is consistent across runs.
-- [ ] Edge cases are handled, not crashed.
+- [ ] Prompt set includes happy, variation, edge, and negative trigger.
+- [ ] Closeout gate run is recorded with evidence.
+- [ ] Skill fires on the right prompts and not the wrong ones.
+- [ ] Edge cases are handled safely.
+- [ ] Written output format is consistent when applicable.
 
-Save your evals in `skills/<skill-name>/_planning/` so reviewers can rerun them.
+Save eval artifacts in `skills-we-built/<skill-name>/_planning/` so reviewers can rerun them.

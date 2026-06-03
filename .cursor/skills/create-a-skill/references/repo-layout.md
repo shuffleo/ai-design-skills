@@ -13,9 +13,9 @@ The folder name must match the `name` in `SKILL.md` frontmatter.
 ## This repo: two folders
 
 1. **`.cursor/skills/`** — skills Cursor loads here (including `create-a-skill` for the workshop).
-2. **`skills/`** — community gallery for PRs. Copy your finished skill here when you ship.
+2. **`skills-we-built/`** — community gallery for PRs. Copy your finished skill here when you ship.
 
-Build locally in `.cursor/skills/your-skill-name/` to test, then copy to `skills/your-skill-name/` before opening a PR.
+Build locally in `.cursor/skills/your-skill-name/` to test, then copy to `skills-we-built/your-skill-name/` before opening a PR.
 
 ## Standard folder layout
 

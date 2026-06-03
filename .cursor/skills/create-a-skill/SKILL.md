@@ -10,7 +10,7 @@ This is the **one guide** for the workshop: onboarding plus how to write a skill
 
 ## Onboarding
 
-Follow [references/onboarding-flow.md](references/onboarding-flow.md) step by step. Save answers to `skills/<skill-name>/_planning/draft.md`. Templates: [assets/draft-paper.md](assets/draft-paper.md), [assets/workflow-recall.md](assets/workflow-recall.md), [assets/skill-spec.md](assets/skill-spec.md).
+Follow [references/onboarding-flow.md](references/onboarding-flow.md) step by step. Save answers to `skills-we-built/<skill-name>/_planning/draft.md`. Templates: [assets/draft-paper.md](assets/draft-paper.md), [assets/workflow-recall.md](assets/workflow-recall.md), [assets/skill-spec.md](assets/skill-spec.md).
 
 ## How to write a skill (short)
 
@@ -41,7 +41,7 @@ description: WHAT it does. Use when [specific triggers].
 
 1. **Frame the job** — When [situation], I want to [motivation], so I can [outcome]. Add a checkable definition of done. See [references/jtbd-and-done.md](references/jtbd-and-done.md).
 2. **Write the description** — WHAT + WHEN, third person, trigger words. This line decides when the skill fires. See [references/skill-writing.md](references/skill-writing.md).
-3. **Test first (TDD)** — 2–3 realistic prompts + expected behavior before you write the body. See [references/tdd-for-skills.md](references/tdd-for-skills.md).
+3. **Test first (TDD)** — capture 2-4 realistic prompts + expected behavior before you write the body; run one closeout eval gate before PR-ready. See [references/tdd-for-skills.md](references/tdd-for-skills.md).
 4. **Keep it lean** — Core steps in `SKILL.md` (under 500 words); long detail in `references/`, code in `scripts/`, templates in `assets/`. Link one level deep.
 5. **Name and ship** — Task name ≤3 words, kebab-case, suffix `-by-<username>`. Copy [../../../../_template](../../../../_template) into `skills-we-built/<name>/`. PR per [../../../../CONTRIBUTING.md](../../../../CONTRIBUTING.md).
 

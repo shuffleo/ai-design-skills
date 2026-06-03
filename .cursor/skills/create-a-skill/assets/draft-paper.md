@@ -1,6 +1,6 @@
 # Draft paper — <skill name TBD>
 
-Working notes from onboarding. The agent fills this in as the designer answers. Copy this file to `skills/<skill-name>/_planning/draft.md` once a working name exists. This becomes the requirements record committed with the skill.
+Working notes from onboarding. The agent fills this in as the designer answers. Copy this file to `skills-we-built/<skill-name>/_planning/draft.md` once a working name exists. This becomes the requirements record committed with the skill.
 
 > Designer: <name>
 > Date: <date>
@@ -33,7 +33,15 @@ Success looks like: <one line>
 - Turns it usually takes: <1 / 2-3 / 5-10 / 10+>
 - Past chat to learn from? <yes / no — link to workflow-recall summary if yes>
 
-## 5. Research (10+ sources)
+## 5. Eval inputs (prepare now)
+
+- Happy path prompt: <...>
+- Variation prompt: <...>
+- Edge case prompt: <...>
+- Negative trigger prompt: <...>
+- Expected output shape (written artifacts only): <sections/template + must-have elements, or N/A>
+
+## 6. Research (10+ sources)
 
 Sources reviewed: <count and list or link to _planning/research/>
 
@@ -45,26 +53,35 @@ Designer feedback — irrelevant: <what they dropped>
 
 Chosen build direction: <A / B / C and one-line why>
 
-## 6. Intern brief (Q&A, verbatim)
+## 7. Intern brief (Q&A, verbatim)
 
 <paste each answer as you go — success, job well done, steps, mistakes, example>
 
 Gaps clarified: <follow-ups>
 
-## 7. Workshop scope confirmed
+## 8. Workshop scope confirmed
 
 Buildable in ~20 min: <yes / no>
 Narrowing agreed: <if any>
 Confirmed by designer: <yes / no>
 
-## 8. Plan tradeoffs (decisions)
+## 9. Plan tradeoffs (decisions)
 
 - Tradeoff: <…> → Decision: <designer answer>
 
-## 9. Skill name
+## 10. Skill name
 
 Folder + frontmatter name: `<task-by-username>`
 
-## 10. Open questions
+## 11. Closeout eval gate record (run once after build)
+
+- Happy/variation result: <pass/fail + evidence>
+- Edge-case safety result: <pass/fail + evidence>
+- Negative-trigger result: <pass/fail + evidence>
+- Output-shape result (if applicable): <pass/fail + evidence>
+- Optional rubric notes: <clarity/usefulness/structure>
+- Time/tokens snapshot (if available): <...>
+
+## 12. Open questions
 
 - <anything still unclear>

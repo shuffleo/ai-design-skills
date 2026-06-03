@@ -39,6 +39,6 @@ Use this when the designer has a past chat where they did this task with an agen
 
 - Pull the **errors to prevent** into the skill's steps or a "when NOT to" note.
 - Pull the **wins to repeat** into the steps and output format.
-- Save the finished summary to `skills/<skill-name>/_planning/workflow-recall.md`.
+- Save the finished summary to `skills-we-built/<skill-name>/_planning/workflow-recall.md`.
 
 Keep it short — extract the lessons, do not transcribe the whole chat.

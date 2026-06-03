@@ -16,7 +16,7 @@ Track every source with a URL or title in the notes.
 
 ## Save learning notes
 
-Write to `skills/<skill-name>/_planning/research/` — one file per theme or source cluster. **No word limit** on these notes; be thorough for your own synthesis.
+Write to `skills-we-built/<skill-name>/_planning/research/` — one file per theme or source cluster. **No word limit** on these notes; be thorough for your own synthesis.
 
 Use this format:
 

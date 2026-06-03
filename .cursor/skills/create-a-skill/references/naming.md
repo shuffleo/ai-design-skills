@@ -23,7 +23,7 @@ Avoid `helper`, `utils`, `tools`, `assistant` in the task part.
 
 ## Avoid conflicts
 
-1. Check existing skills under `skills/` (see [../../../../README.md](../../../../README.md)) — another author's suffix makes yours unique.
+1. Check existing skills under `skills-we-built/` (see [../../../../README.md](../../../../README.md)) — another author's suffix makes yours unique.
 2. Check installed skills in `~/.cursor/skills/` and `.cursor/skills/`.
 3. If descriptions could overlap, add trigger words or a negative trigger in `description`.
 
@@ -34,4 +34,4 @@ Avoid `helper`, `utils`, `tools`, `assistant` in the task part.
 - [ ] kebab-case; folder matches frontmatter `name`.
 - [ ] No clash with another skill's triggers.
 
-Record the final name in [../assets/skill-spec.md](../assets/skill-spec.md), then copy [../../../../_template](../../../../_template) into `skills/<name>/`.
+Record the final name in [../assets/skill-spec.md](../assets/skill-spec.md), then copy [../../../../_template](../../../../_template) into `skills-we-built/<name>/`.
